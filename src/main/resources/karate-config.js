@@ -4,23 +4,23 @@ function config () {
 
   var config = {
     database: {
-      databaseName: 'patientflow',
+      databaseName: 'databaseName',
       driverClassName: 'org.postgresql.Driver',
       username: null,
       password: '_RESOLVE_ENV_database.primary.password',
-      url: 'jdbc:postgresql://35.185.118.131:5432/patientflow',
+      url: 'jdbc:postgresql://host:5432/databaseName',
 
       primary: {
-        databaseName: 'patientflow',
+        databaseName: 'databaseName',
         driverClassName: 'org.postgresql.Driver',
         username: null,
         password: '_RESOLVE_ENV_database.primary.password',
-        url: 'jdbc:postgresql://35.185.118.131:5432/patientflow'
+        url: 'jdbc:postgresql://host:5432/databaseName'
       }
     }
   }
 
-  if (env === 'psuat') {
+  if (env === 'uat') {
     config.database.username = 'external'
     config.database.primary.username = 'external'
   }
